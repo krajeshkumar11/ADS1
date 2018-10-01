@@ -55,7 +55,10 @@ class LinkedList {
                 temp = null;
             } else if (temp.next.next == null) {
                 val = temp.next.data;
-                temp = temp.next;
+                temp.next = null;
+                // System.out.println("HI");
+                // System.out.println(toString());;
+                // System.out.println("lo");
             } else {
                 while(temp.next.next != null) {
                     temp = temp.next;
