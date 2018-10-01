@@ -100,7 +100,13 @@ public class Solution {
         for (int i = 0; i < n; i++) {
             Queue ll = new Queue();
             while(sc.hasNext()) {
-                String[] input = sc.nextLine().split(" ");
+                String st = sc.nextLine();
+                if(st.equals("")){
+                    ll = new Queue();
+                    System.out.println();
+                }
+                // System.out.println(st);
+                String[] input = st.split(" ");
                 switch(input[0]){
                     case "push":
                         ll.pushLeft(Integer.parseInt(input[1]));
@@ -127,6 +133,7 @@ public class Solution {
                         break;
                 }
             }
+            ll = null;
         }
     }
 }
