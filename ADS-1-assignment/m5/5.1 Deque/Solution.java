@@ -36,6 +36,10 @@ class LinkedList {
     }
 
     public int popLeft() {
+        if(start == null) {
+            System.out.println("Deck is empty");
+            return -1;
+        }
         int val = start.data;
         start = start.next;
         if(start == null) {
@@ -56,9 +60,6 @@ class LinkedList {
             } else if (temp.next.next == null) {
                 val = temp.next.data;
                 temp.next = null;
-                // System.out.println("HI");
-                // System.out.println(toString());;
-                // System.out.println("lo");
             } else {
                 while(temp.next.next != null) {
                     temp = temp.next;
@@ -67,8 +68,11 @@ class LinkedList {
                 temp.next = null;
             }
             size--;
+            return val;
+        } else {
+            System.out.println("Deck is empty");
+            return -1;
         }
-        return val;
     }
 
     public int size() {
@@ -108,12 +112,14 @@ public class Solution {
                     System.out.println(ll.toString());
                     break;
                 case "popLeft":
-                    ll.popLeft();
-                    System.out.println(ll.toString());
+                    if(ll.popLeft() != -1) {
+                        System.out.println(ll.toString());
+                    }
                     break;
                 case "popRight":
-                    ll.popRight();
-                    System.out.println(ll.toString());
+                    if(ll.popRight() != -1) {
+                        System.out.println(ll.toString());
+                    }
                     break;
                 case "size":
                     System.out.println(ll.size());
