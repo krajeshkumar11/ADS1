@@ -15,14 +15,14 @@ class Queue {
         size = 0;
     }
 
-    public void pushLeft(int val) {
+    public void push(int val) {
         Node temp = start;
         start = new Node(val);
         start.next = temp;
         size++;
     }
 
-    public void pushRight(int val) {
+    public void enqueue(int val) {
         if(start == null) {
             start = new Node(val);
         } else {
@@ -35,7 +35,7 @@ class Queue {
         size++;
     }
 
-    public int popLeft() {
+    public int pop() {
         if(start == null) {
             return -1;
         }
@@ -47,30 +47,6 @@ class Queue {
             size--;
         }
         return val;
-    }
-
-    public int popRight() {
-        int val = 0;
-        if(start != null) {
-            Node temp = start;
-            if(temp.next == null) {
-                val = temp.data;
-                temp = null;
-            } else if (temp.next.next == null) {
-                val = temp.next.data;
-                temp.next = null;
-            } else {
-                while(temp.next.next != null) {
-                    temp = temp.next;
-                }
-                val = temp.next.data;
-                temp.next = null;
-            }
-            size--;
-            return val;
-        } else {
-            return -1;
-        }
     }
 
     public int size() {
@@ -105,26 +81,20 @@ public class Solution {
                     ll = new Queue();
                     System.out.println();
                 }
-                // System.out.println(st);
                 String[] input = st.split(" ");
                 switch(input[0]){
                     case "push":
-                        ll.pushLeft(Integer.parseInt(input[1]));
+                        ll.push(Integer.parseInt(input[1]));
                         System.out.println(ll.toString());
                         break;
                     case "enqueue":
-                        ll.pushRight(Integer.parseInt(input[1]));
+                        ll.enqueue(Integer.parseInt(input[1]));
                         System.out.println(ll.toString());
                         break;
                     case "pop":
-                        if(ll.popLeft() != -1) {
+                        if(ll.pop() != -1) {
                             System.out.println(ll.toString());
                         } else {
-                            System.out.println(ll.toString());
-                        }
-                        break;
-                    case "popRight":
-                        if(ll.popRight() != -1) {
                             System.out.println(ll.toString());
                         }
                         break;
