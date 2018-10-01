@@ -7,10 +7,10 @@ class Node{
         next = null;
     }
 }
-class LinkedList {
+class Queue {
     Node start;
     int size;
-    LinkedList() {
+    Queue() {
         start = null;
         size = 0;
     }
@@ -97,10 +97,8 @@ public class Solution {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         sc.nextLine();
-        LinkedList ll = new LinkedList();
-        // String p = sc.nextLine();
-        // String q = sc.nextLine();
         for (int i = 0; i < n; i++) {
+            Queue ll = new Queue();
             while(sc.hasNext()) {
                 String[] input = sc.nextLine().split(" ");
                 switch(input[0]){
