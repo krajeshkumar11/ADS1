@@ -74,36 +74,35 @@ public class Solution {
         int n = sc.nextInt();
         sc.nextLine();
         for (int i = 0; i < n; i++) {
-            Queue ll = new Queue();
+            Queue queue = new Queue();
             while(sc.hasNext()) {
                 String st = sc.nextLine();
                 if(st.equals("")){
-                    ll = new Queue();
+                    queue = new Queue();
                     System.out.println();
                 }
                 String[] input = st.split(" ");
                 switch(input[0]){
                     case "push":
-                        ll.push(Integer.parseInt(input[1]));
-                        System.out.println(ll.toString());
+                        queue.push(Integer.parseInt(input[1]));
+                        System.out.println(queue.toString());
                         break;
                     case "enqueue":
-                        ll.enqueue(Integer.parseInt(input[1]));
-                        System.out.println(ll.toString());
+                        queue.enqueue(Integer.parseInt(input[1]));
+                        System.out.println(queue.toString());
                         break;
                     case "pop":
-                        if(ll.pop() != -1) {
-                            System.out.println(ll.toString());
+                        if(queue.pop() != -1) {
+                            System.out.println(queue.toString());
                         } else {
-                            System.out.println(ll.toString());
+                            System.out.println(queue.toString());
                         }
                         break;
                     case "size":
-                        System.out.println(ll.size());
+                        System.out.println(queue.size());
                         break;
                 }
             }
-            ll = null;
         }
     }
 }
