@@ -4,12 +4,14 @@ true
 false
 true
 false
+
 Your Output: 
 true
 false
 true
 false
 ----------------------------------------
+
 ########## Testcase 1: Passed ##########
 Expected Output: 
 false
@@ -18,6 +20,7 @@ false
 false
 false
 false
+
 Your Output: 
 false
 false
@@ -26,6 +29,7 @@ false
 false
 false
 ----------------------------------------
+
 ########## Testcase 2: Passed ##########
 Expected Output: 
 true
@@ -36,6 +40,7 @@ false
 false
 true
 false
+
 Your Output: 
 true
 true
@@ -46,23 +51,28 @@ false
 true
 false
 ----------------------------------------
+
 ########## Testcase 3: Passed ##########
 Expected Output: 
 true
 false
 false
+
 Your Output: 
 true
 false
 false
 ----------------------------------------
+
 ########## Testcase 4: Passed ##########
 Expected Output: 
 true
 true
 false
+
 Your Output: 
 true
 true
 false
 ----------------------------------------
+
