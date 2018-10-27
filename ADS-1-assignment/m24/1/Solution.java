@@ -34,10 +34,18 @@ public class Solution {
             if(uinputlist[0].equals("get")) {
                 if(uinputlist[2].equals("1")) {
                     Student st = lpht.get(Integer.parseInt(uinputlist[1]));
-                    System.out.println(st.name);
+                    if(st == null) {
+                        System.out.println("Student doesn't exists...");
+                    } else {
+                        System.out.println(st.name);
+                    }
                 } else if(uinputlist[2].equals("2")) {
                     Student st = lpht.get(Integer.parseInt(uinputlist[1]));
-                    System.out.println(st.percentage);
+                    if(st == null) {
+                        System.out.println("Student doesn't exists...");
+                    } else {
+                        System.out.println(st.percentage);
+                    }
                 }
             }
             operations_n--;
